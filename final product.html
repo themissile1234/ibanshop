@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<head>
+	
+	<title>Indicated Tabs Tutorial</title>
+	<meta charset="utf-8" />	
+	
+	<!-- stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/style1.css" />	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!-- javascript -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<!--[if lt IE9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<style>
+a,
+a:hover {
+    -webkit-transition: color ease-in-out 800ms;
+    color: blue;
+}
+
+a:hover {
+    color: blue;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+	<style>
+	body {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+  background-color: #fff;
+}
+
+.gradient-multiline {
+  position: relative;
+  width: 300px;
+  margin: 40px auto;
+  background-color: #fff;
+  text-align: left;
+  line-height: 1.5em;
+  overflow:hidden;
+}
+  
+.gradient-multiline span {
+  color: #fff;
+  background-color: #000;
+
+  padding: 0.225rem 0.5rem;
+
+  /* Needs prefixing */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+@supports(mix-blend-mode: lighten) {
+  
+  .gradient-multiline::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background: linear-gradient(60deg, #3629a2, #00ceff);
+
+    mix-blend-mode: lighten;
+  }
+  
+}
+	</style>
+	 
+    <style> 
+        #backG { 
+            width: 690px; 
+            height: auto; 
+            color: white; 
+            background: orange; 
+            margin: 0 auto; 
+        } 
+    </style> 
+	<style> 
+        #text2 { 
+            width: 690px; 
+            height: auto; 
+            color: white; 
+            background: orange; 
+            margin: 0 auto; 
+        } 
+    </style> 
+	<style> 
+        #text3 { 
+            width: 690px; 
+            height: auto; 
+            color: white; 
+            background: orange; 
+            margin: 0 auto; 
+        } 
+    </style> 
+	
+<script>
+function color1(){ document.getElementById("change").style.color = "black";}
+function color2(){ document.getElementById("change").style.color = "white";}
+function color3(){ document.getElementById("change12").style.color = "black";}
+function color4(){ document.getElementById("change12").style.color = "white";}
+</script>
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<style>
+.footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   height: 100%;
+   width: 100%;
+   background-image: url(https://lh3.googleusercontent.com/Hvv9ETg1jEZc39VthRlurXeRybmjec9Iass9X88cxG9GBpfPbeg6o2Xt9tV5DlHLB9WEh8_ULm9xb4RHV8G0HugPhlr0MMisQYlsvPvAELd0jZd78fxbv6UO3NIFrZrIi1mJ91K5JXAJHQDHnhzUU_wYsBFH0eCbVuutFP3YQPxq9hfuFestD9L0e0964e0Hx9dGcor-ersmuXD5dMj4yOJygruiofjlhNHGLU6A4bWHkDV5GT0pcRBxMPHreppC5jtmhHqdQnMGPE7y3Su6u8xJf3FhlJdfsnwX8Z_VYKVS4IVMI6MSIuHCnuKOp6pYEOgPV8aqjg5y2FyDehvnkgwpjLT_FtpnhvhUDoxBHU-nHCRbFOS1U2bH1yC7Ai-n-Yst3ZztJH8Y2zVgTPLKoMesn_W0xzMhGeTul44muQSIbireV09QGTguFQz_MDRcO0qogF_D7kY09KuzHR9T5pUFzFfBbkZatb0zUtCFgQB_X98evGVwluCP5lEZhAg9XYDlxum8sj0-vLFZ8PP6xp7vlFvDs-1bABImv6uEUJec_GJmjnfTjIHP4hgwdMlX27NLJ1QmvxA44Z4M0BuqK0yFnAXRCkmCXsOl18h1Iz86YKe8X3DtvuHanzgW2-KZn_K5PQSvQ5bB-73O1Q06FO52yO98Cqktr2ZmtXAbwufx4by9TA07BA=w700-h693-no);
+   color: white;
+   text-align: center;
+}
+</style>
+<script>
+$(document).ready(function() { 
+  var size = $('#backG').css('font-size'); 
+  $("#largeFont").click(function(){ 
+      $('#backG').css('font-size', '30px');
+      return false; 
+  });
+  $("#resetFont").click(function(){ 
+      $('#backG').css('font-size', size);
+      return false; 
+  });
+  $("#increaseFont").click(function() { 
+      var size = $('#backG').css('font-size');
+      $('#backG').css('font-size', parseInt(size)+2); 
+      return false;
+  });
+  $("#decreaseFont").click(function() { 
+      var size = $('#backG').css('font-size');
+      $('#backG').css('font-size', parseInt(size)-2); 
+      return false;
+  }); 
+  $("#smallFont").click(function(){ 
+      $('#backG').css('font-size', '10px');
+      return false; 
+  });
+});
+
+</script>
+<script>
+$(document).ready(function() { 
+  var size = $('#text2').css('font-size'); 
+  $("#largeFont").click(function(){ 
+      $('#text2').css('font-size', '30px');
+      return false; 
+  });
+  $("#resetFont").click(function(){ 
+      $('#text2').css('font-size', size);
+      return false; 
+  });
+  $("#increaseFont").click(function() { 
+      var size = $('#text2').css('font-size');
+      $('#text2').css('font-size', parseInt(size)+2); 
+      return false;
+  });
+  $("#decreaseFont").click(function() { 
+      var size = $('#text2').css('font-size');
+      $('#text2').css('font-size', parseInt(size)-2); 
+      return false;
+  }); 
+  $("#smallFont").click(function(){ 
+      $('#text2').css('font-size', '10px');
+      return false; 
+  });
+});
+
+</script>
+
+
+</head>
+
+<body id='body'>	
+
+	<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs').children('li');
+
+			$("#tabs").tabs("#content section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 800,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+
+		});
+
+	</script>
+	<div style="background-image: url(https://lh3.googleusercontent.com/Hvv9ETg1jEZc39VthRlurXeRybmjec9Iass9X88cxG9GBpfPbeg6o2Xt9tV5DlHLB9WEh8_ULm9xb4RHV8G0HugPhlr0MMisQYlsvPvAELd0jZd78fxbv6UO3NIFrZrIi1mJ91K5JXAJHQDHnhzUU_wYsBFH0eCbVuutFP3YQPxq9hfuFestD9L0e0964e0Hx9dGcor-ersmuXD5dMj4yOJygruiofjlhNHGLU6A4bWHkDV5GT0pcRBxMPHreppC5jtmhHqdQnMGPE7y3Su6u8xJf3FhlJdfsnwX8Z_VYKVS4IVMI6MSIuHCnuKOp6pYEOgPV8aqjg5y2FyDehvnkgwpjLT_FtpnhvhUDoxBHU-nHCRbFOS1U2bH1yC7Ai-n-Yst3ZztJH8Y2zVgTPLKoMesn_W0xzMhGeTul44muQSIbireV09QGTguFQz_MDRcO0qogF_D7kY09KuzHR9T5pUFzFfBbkZatb0zUtCFgQB_X98evGVwluCP5lEZhAg9XYDlxum8sj0-vLFZ8PP6xp7vlFvDs-1bABImv6uEUJec_GJmjnfTjIHP4hgwdMlX27NLJ1QmvxA44Z4M0BuqK0yFnAXRCkmCXsOl18h1Iz86YKe8X3DtvuHanzgW2-KZn_K5PQSvQ5bB-73O1Q06FO52yO98Cqktr2ZmtXAbwufx4by9TA07BA=w700-h693-no); height: auto; width: auto; border: 7px solid orange;"><h2 color="white"><font color="white">
+	
+	<header>
+		<hgroup>
+		<h2 style="right:670px;" class="gradient-multiline" align="left"><span>
+			ΦΡΟΝΤΙΣΤΗΡΙΟ ΙΒΑΝ ΠΑΠΑΣΣΑΒΑ </span></h1>
+			
+		</hgroup>
+	</header>
+	</font></h2>
+	
+	
+	<nav>		
+		<ul id="tabs">
+			<li><a class="current" href="#">ΑΡΧΙΚΗ ΣΕΛΙΔΑ</a></li>
+			<li><a href="#">ΒΙΟΓΡΑΦΙΚΟ</a></li>
+			<li><a href="#">ΚΡΙΤΙΚΕΣ ΜΑΘΗΤΩΝ</a></li>
+			<li><a href="#">ΦΩΤΟΓΡΑΦΙΕΣ</a></li>
+			<li><a href="#">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+		</ul>
+		<span id="indicator" style="border: 2px solid #00ccff;"></span>
+	</nav>
+	</div>
+	<div id="body">
+	<div id="content">
+	
+		<section>				
+			
+
+	
+
+
+
+
+<style>
+body {
+    background-image: url("https://media.freestocktextures.com/cache/e4/16/e416dbaffbbc27dec38596d237802a35.jpg"); 
+    background-repeat: repeat;
+}
+</style>
+<font color="white"><h2>ΕΙΚΟΝΑ ΦΟΝΤΟΥ</h2></font>
+<button type="button" onclick="myFunction()">ΦΟΝΤΟ ΕΙΚΟΝΑΣ</button>
+<font color="white"><h2>ΤΥΠΟΣ ΓΡΑΜΜΑΤΟΣΕΙΡΑΣ</h2></font>
+<input class="button" onclick="document.body.style.cssText+=&#39;;font-family: Times New Roman;&#39;;" type="button" value="Times New Roman" />
+<font color="white"><h2>ΧΡΩΜΑ ΓΡΑΜΜΑΤΟΣΕΙΡΑΣ</h2></font>
+<h2><font color="white">ΓΙΑ ΤΙ ΣΕΛΙΔΑ ΒΙΟΓΡΑΦΙΚΟ</font></h2>
+
+<button onclick="color1()">ΜΑΥΡΟ</button>
+<button onclick="color2()">ΑΣΠΡΟ</button>
+
+
+<h2><font color="white">ΓΙΑ ΤΙ ΣΕΛΙΔΑ ΚΡΙΤΙΚΕΣ ΜΑΘΗΤΩΝ</font></h2>
+<button onclick="color3()">ΜΑΥΡΟ</button>
+<button onclick="color4()">ΑΣΠΡΟ</button>
+
+<center>
+
+
+ <div align="left">
+        <label><font color="white"><h2>ΧΡΩΜΑ ΦΟΝΤΟΥ</h2></font></label>
+		<p align="left">
+        <button type="button" onclick="myFunction1()">ΦΟΝΤΟ ΕΙΚΟΝΑΣ</button>
+		</p>
+    </div>
+		<a id="largeFont" href=""><font color="white">Large Font</font></a> - 
+<a id="increaseFont" href=""><font color="white">Increase Font</font></a> - 
+<a id="decreaseFont" href=""><font color="white">Decrease Font</font></a> - 
+<a id="smallFont" href=""><font color="white">Small Font</font></a> - 
+<a id="resetFont" href=""><font color="white">Reset</a>				
+		</section>
+	
+		<section>		
+			<p>
+			
+    <br> 
+    <br> 
+    <div id="backG" style="border-radius:19px; height:auto; width:610px;"> <p id="change"><br/>
+			Το Φροντιστήριο Αγγλικής Γλώσσας «Ηβάν Παπασάββα» λειτουργεί από το 1991 και έχει καθιερωθεί σαν ένα από τα πιο επιτυχημένα Φροντιστήρια της Φθιώτιδας.
+			<br/>
+			Προετοιμάζουμε με προσοχή και συνέπεια τα παιδιά για της εξετάσεις του Palso, Cambridge, Michigan & PTE με αποτέλεσμα τα ποσοστά επιτυχίας να είναι εξαιρετικά υψηλά. Μεγάλος αριθμός παιδιών έχει φοιτήσει με επιτυχία στο φροντιστήριό μας.
+Οι εγκαταστάσεις μας  διαμορφώνουν τις ιδανικές συνθήκες για τη διδασκαλία των μαθητών, αλλά και την ευχάριστη παραμονή τους στο χώρο.
+Τα τμήματα μας είναι ολιγομελή. Με αυτό το τρόπο επιτυγχάνουμε καλύτερη επικοινωνία μεταξύ μαθητών και διδασκόντων.
+Επίσης υπάρχει επαρκής χρόνος συμμετοχής στο μάθημα για κάθε μαθητή, αλληλεπίδραση με τους άλλους μαθητές και δυνατότητα για αποτελεσματική αξιολόγηση της όλης μαθησιακής διαδικασίας.
+<b>Η διδασκαλία γίνεται προσωπικά από την κ. Ηβάν Παπασάββα, πτυχιούχο του Πανεπιστημίου Central Connenticut State University Αμερικής, έχοντας την Αγγλική ως μητρική γλώσσα.</b>
+Δίδεται έμφαση στη συμμετοχή του μαθητή και επιδιώκεται συχνή εναλλαγή για να διατηρεί αμείωτο το ενδιαφέρον του.
+<u>Γραμματική – Συζήτηση – Τραγούδια – Εκπαιδευτικά παιχνίδια -Καθημερινός έλεγχος προόδου</u>
+Η Αγγλική γλώσσα είναι πλέον γνωστή και αδιαμφισβήτητη, έχοντας καθιερωθεί σαν παγκόσμια γλώσσα. Αποτελεί το βασικότερο εφόδιο για το μέλλον των παιδιών.Ας μην ξεχνάμε ότι η παγκόσμια βιβλιογραφία και όλα τα εμπορικά έγγραφα είναι στην Αγγλική.
+Παρά την επιτυχημένη πορεία μας τα δίδακτρα παραμένουν χαμηλά και προσιτά στον καθένα.
+</p>
+</div>
+		</section>
+		<section>
+		<br/>
+			<div id="text2" style="border-radius:19px; height:auto; width:610px;"><p id="change12"><br/>The second class of facts to which we have alluded has reference to the question whether or not the motion of the earth in space can be made perceptible in terrestrial experiments. We have already remarked in Section 5 that all attempts of this nature led to a negative result. Before the theory of relativity was put forward, it was difficult to become reconciled to this negative result, for reasons now to be discussed. The inherited prejudices about time and space did not allow any doubt to arise as to the prime importance of the Galileian transformation for changing over from one body of reference to another.</p>
+		</div>
+		</section>
+		
+		<section>
+			
+		<div class="container gallery-container">
+
+    
+    
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4">
+                <a class="lightbox" href="https://www.mag24.gr/wp-content/uploads/2016/09/hvan33mag24.jpg">
+                    <img src="https://www.mag24.gr/wp-content/uploads/2016/09/hvan33mag24.jpg" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://www.mag24.gr/wp-content/uploads/2016/09/hvan10.jpg">
+                    <img src="https://www.mag24.gr/wp-content/uploads/2016/09/hvan10.jpg" alt="Park">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://www.mag24.gr/wp-content/uploads/2016/09/hvan5.jpg">
+                    <img width="200" height="200" src="https://www.mag24.gr/wp-content/uploads/2016/09/hvan5.jpg" alt="Tunnel">
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <a class="lightbox" href="https://www.mag24.gr/wp-content/uploads/2016/09/hvan3.jpg">
+                    <img src="https://www.mag24.gr/wp-content/uploads/2016/09/hvan3.jpg" alt="Traffic">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://www.mag24.gr/wp-content/uploads/2016/09/hvan4.jpg">
+                    <img src="https://www.mag24.gr/wp-content/uploads/2016/09/hvan4.jpg" alt="Coast">
+                </a>
+            </div> 
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+			
+			
+			
+			
+			</p>
+		</section>
+		
+				<section>
+		<br/><p id="text3" style="height:770px; border-radius:25px;"><a href="https://m.me/englishlanguageschoolyvonnepapasavva?fbclid=IwAR3GCV8i7tpkQihOQOt33f7XHbcfj_D1A6s0wQukM5VCXHRjnnrvU0LOdnw" target="_blank"><img src="https://i1.wp.com/www.xda-developers.com/files/2019/03/Facebook-Messenger-Dark-Mode_logo-810x298_c.png?w=1220&ssl=1" alt="ΒΡΕΙΤΕ ΜΑΣ ΣΤΟ ΜΕSSENGER" style="width:50%; border: 2px solid rgb(0, 204, 255); left: 588.031px; height:190px; width:390px; border-radius:75px;"></a><br/><iframe height="500" width="600" src="https://contactformiban.blogspot.com"></iframe></p>
+		</section>	
+		
+	</div>
+	</div>
+	 </div>
+   
+ </div>
+</div>
+	<div class="footer" style="height:auto;">
+	<a href="#"><h2>FACEBOOK FAN PAGE</h2></a>
+		<p><iframe src="https://ibanfb.blogspot.com/" width="400" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>.</p>
+		<!-- Footer end -->
+		<br/><font color="black">© 2020 COPYRIGHT TERMS <a href="#">ΙΒΑΝ ΠΑΠΑΣΣΑΒΑ</a> <font color="black">All Rights Reserved
+	</div>
+</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+ <script>
+function myFunction() {
+  document.body.style.backgroundColor = "#f3f3f3";
+  document.body.style.backgroundImage = "url('https://image.freepik.com/free-photo/color-two-tone-blue-yellow-paper-background_23-2147981644.jpg')";
+}
+</script>
+<script>
+function myFunction1() {
+  document.body.style.backgroundColor = "#f3f3f3";
+  document.body.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcToT-x4WLebNLJIRDZ57D9iurAIy4IxJsbGETAW62E7JMFQWqXi')";
+}
+</script>
+
+</body>
+
+</html>	
